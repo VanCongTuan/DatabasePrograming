@@ -1,0 +1,35 @@
+﻿@model LTCSDLMayBay.Models.TuyenBay
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TuyenBay</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SanBayDen.TenSB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SanBayDen.TenSB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SanBayDi.TenSB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SanBayDi.TenSB)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaTuyenBay }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<LTCSDLMayBay.Models.MayBay>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Máy Bay</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenMB)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenMB)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaMb }) |          
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaMb })
+        </td>
+    </tr>
+}
+
+</table>

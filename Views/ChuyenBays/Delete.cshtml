@@ -1,0 +1,41 @@
+﻿@model LTCSDLMayBay.Models.ChuyenBay
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ChuyenBay</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TuyenBay.MaTuyenBay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TuyenBay.MaTuyenBay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenCB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenCB)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

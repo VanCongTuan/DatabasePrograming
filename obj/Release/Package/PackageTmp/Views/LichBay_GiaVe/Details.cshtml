@@ -1,0 +1,67 @@
+﻿@model LTCSDLMayBay.Models.LichBay_GiaVe
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LichBay_GiaVe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaVe.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaVe.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HangVe.LoaiHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HangVe.LoaiHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LichBay.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LichBay.TrangThai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayApDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayApDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayKetThuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayKetThuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongGhe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongGhe)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

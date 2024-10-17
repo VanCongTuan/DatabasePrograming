@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="StrConnect-Web.config Connection String" description="StrConnect Connection String used in web.config by the application to access the database." defaultValue="Data Source=VCTUAN\VANCONGTUAN;Initial Catalog=QLDVMB;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\LTCSDLMayBay\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='StrConnect']/@connectionString" />
+  </parameter>
+  <parameter name="StrConnect_DatabasePublish-Web.config Connection String" description="StrConnect_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="StrConnect_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\LTCSDLMayBay\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='StrConnect_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>

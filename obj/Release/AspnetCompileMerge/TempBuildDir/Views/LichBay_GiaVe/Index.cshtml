@@ -1,0 +1,64 @@
+﻿@model IEnumerable<LTCSDLMayBay.Models.LichBay_GiaVe>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Lịch Bay Giá Vé</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaVe.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HangVe.LoaiHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LichBay.TrangThai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayApDung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayKetThuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongGhe)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaVe.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HangVe.LoaiHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LichBay.TrangThai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayApDung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayKetThuc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongGhe)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

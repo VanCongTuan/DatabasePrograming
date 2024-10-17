@@ -1,0 +1,40 @@
+﻿@model IEnumerable<LTCSDLMayBay.Models.ChuyenBay>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Chuyến Bay</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TuyenBay.MaTuyenBay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenCB)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TuyenBay.MaTuyenBay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenCB)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaCB }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaCB }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaCB })
+        </td>
+    </tr>
+}
+
+</table>
